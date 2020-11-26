@@ -171,3 +171,4 @@ var quiztitle = "Bem-Vindo ao Quiz sobre Covid-19!";
             b(quiz[0]["choices"]);
             e(document.createElement("div")).addClass("choice-box").attr("id","submitbutton").text("Verifique a resposta").css({"font-weight":700,color:"#222",padding:"30px 0"}).appendTo("#frame");c()}}g
             ()});
+            
