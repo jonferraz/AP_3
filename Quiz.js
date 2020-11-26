@@ -119,15 +119,15 @@ var quiztitle = "Bem-Vindo ao Quiz sobre Covid-19!";
     function d(){
       submt=true;
       e("#explanation").empty();
-      e("#question").text(quiz[currentquestion]["Questão"]);
+      e("#question").text(quiz[currentquestion]["question"]);
       e("#pager").text("Questão "+Number(currentquestion+1)+" de "+quiz.length);
       if(quiz[currentquestion].hasOwnProperty("image")&&quiz[currentquestion]["image"]!=""){
         if(e("#question-image").length==0){
           e(document.createElement("img")).addClass("question-image").attr("id","question-image").attr("src",
-          quiz[currentquestion]["image"]).attr("alt",h(quiz[currentquestion]["Questão"])).insertAfter("#question")
+          quiz[currentquestion]["image"]).attr("alt",h(quiz[currentquestion]["question"])).insertAfter("#question")
         }
           else{
-            e("#question-image").attr("src",quiz[currentquestion]["image"]).attr("alt",h(quiz[currentquestion]["Questão"]))}
+            e("#question-image").attr("src",quiz[currentquestion]["image"]).attr("alt",h(quiz[currentquestion]["question"]))}
           }
             else{e("#question-image").remove()}b(quiz[currentquestion]["choices"]);c()}function f(i){
               if(quiz[currentquestion]["choices"][i]==quiz[currentquestion]["correct"]){e(".choice").eq(i).css({"background-color":"#50D943"});e("#explanation").html("<strong>Correto!</strong> "+h(quiz[currentquestion]["explanation"]));score++
@@ -164,11 +164,10 @@ var quiztitle = "Bem-Vindo ao Quiz sobre Covid-19!";
             if(typeof quiz!=="undefined"&&e.type(quiz)==="array")
             {
               e(document.createElement("p")).addClass("pager").attr("id","pager").text("Questão 1 de "+quiz.length).appendTo("#frame");
-              e(document.createElement("h2")).addClass("Questão").attr("id","Questão").text(quiz[0]["Questão"]).appendTo("#frame");
-              if(quiz[0].hasOwnProperty("image")&&quiz[0]["image"]!=""){e(document.createElement("img")).addClass("question-image").attr("id","question-image").attr("src",quiz[0]["image"]).attr("alt",h(quiz[0]["Questão"])).appendTo("#frame")
+              e(document.createElement("h2")).addClass("question").attr("id","question").text(quiz[0]["question"]).appendTo("#frame");
+              if(quiz[0].hasOwnProperty("image")&&quiz[0]["image"]!=""){e(document.createElement("img")).addClass("question-image").attr("id","question-image").attr("src",quiz[0]["image"]).attr("alt",h(quiz[0]["question"])).appendTo("#frame")
             }
             e(document.createElement("p")).addClass("explanation").attr("id","explanation").html("&nbsp;").appendTo("#frame");e(document.createElement("ul")).attr("id","choice-block").appendTo("#frame");
             b(quiz[0]["choices"]);
             e(document.createElement("div")).addClass("choice-box").attr("id","submitbutton").text("Verifique a resposta").css({"font-weight":700,color:"#222",padding:"30px 0"}).appendTo("#frame");c()}}g
             ()});
-            
