@@ -37,8 +37,8 @@ h1{
     padding:0;
     width:auto;
     margin-left: 0px;
-    background-color: rgb(187, 37, 37);
-    color: #fff;
+    background-color:whitesmoke;
+    color:red;
   }
 h2{
     font:italic bold 1.3em/1.2em "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -53,8 +53,8 @@ p.pager{
 }
 img.question-image{
     display:block;
-    max-width:250px;
-    margin:10px auto;
+    max-width:350px;
+    margin:20px auto;
     border:1px solid #ccc;
     width:100%;
     height:auto;
